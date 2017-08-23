@@ -1,0 +1,29 @@
+<div class="container" ng-controller="CheckoutCtrl">
+	<div class="page-header">
+		<h3> Checkout Page </h3>
+	</div>
+	<div class="well">
+		<table class="table table-stripped">
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Price</th>
+				</tr>
+
+			</thead>
+			<tbody>
+				<tr ng-repeat = "i in selectedItems" ng-if="i.selected !=0">
+					<td>{{i.item}}</td>
+					<td>Rs. {{i.selected}}</td>
+				</tr>
+				<tr>
+					<td><strong>Total:</strong></td>
+					<td><strong>Rs. {{checkoutTotal}}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="text-left">
+		<a href="#!/cart" class="btn btn-danger">Customize</a>
+	</div>
+</div>
